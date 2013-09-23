@@ -1,0 +1,19 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>FeverNotes</title>
+</head>
+<body>
+  <h1>FeverNotes</h1>
+  <textarea id="editor"></textarea>
+  <div id="preview">
+  </div>
+  <script src="jquery-2.0.3.min.js"></script>
+  <script>
+var editor = $('#editor');
+editor.keyup(function(evt) {
+  $("#preview").load("/render?markdown=" + encodeURIComponent(editor.val()));
+});
+  </script>
+</body>
+</html>
