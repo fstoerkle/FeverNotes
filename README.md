@@ -1,10 +1,9 @@
 FeverNotes
 ==========
-
-Note sharing for humans [1]
-
+Note Sharing for Humans™ ¹.
 
 
 
 
-[1]: Test
+
+¹ Tag line shamelessly ripped of from [@kennethreitz](https://github.com/kennethreitz)' [Requests](http://python-requests.org/).
