@@ -1,0 +1,18 @@
+
+<%= link_to 'All Notes', notes_path %>
+
+<p>
+  <strong>Title:</strong>
+  <%= @note.title %>
+</p>
+
+<p>
+  <strong>Content</strong>
+  <%= @note.content %>
+</p>
+
+<p>
+  <%= link_to 'Edit Note', edit_note_path(@note) %> |
+  <%= link_to 'Delete Note', note_path(@note),
+              method: :delete, data: { confirm: 'Do you really want to delete this note?' } %>
+</p>
