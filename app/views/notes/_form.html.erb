@@ -1,0 +1,21 @@
+<%= form_for @note do |form| %>
+  <% if @note.errors.any? %>
+  <div class="errors">
+    <h2><%= pluralize(@note.errors.count, "error") %> prohibited this post from being saved:</h2>
+    <% @note.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </div>
+  <% end %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+  <p>
+    <%= form.label :content %><br>
+    <%= form.text_area :content %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
