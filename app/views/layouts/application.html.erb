@@ -8,6 +8,19 @@
 </head>
 <body>
 
+<p>
+<% if user_signed_in? %>
+  You are logged in as <%= current_user.email %>.<br>
+  <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+  <%= %>
+<% else %>
+  <%= link_to 'Sign up', new_user_registration_path %>
+<% end %>
+</p>
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
 <%= yield %>
 
 </body>
