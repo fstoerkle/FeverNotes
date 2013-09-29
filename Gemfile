@@ -51,3 +51,6 @@ gem 'devise'
 
 # Make this app fit for deployment to Heroku
 gem 'rails_12factor', group: :production
+
+# Use unicorn as the webserver of choice
+gem 'unicorn'
