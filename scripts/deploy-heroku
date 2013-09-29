@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+branch = `git name-rev HEAD 2> /dev/null | sed "s#HEAD\\ \\(.*\\)#\\1#"`.strip
+cmd = "git push heroku #{branch}:master"
+puts "Deploying to Heroku:\n\n\t$> #{cmd}\n\n"
+exec cmd
