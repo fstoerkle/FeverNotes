@@ -2,7 +2,7 @@ class NotesController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    @notes = Note.all
+    @notes = notes_for_user.all
   end
 
   def new
@@ -10,17 +10,17 @@ class NotesController < ApplicationController
   end
 
   def show
-    @note = Note.find(params[:id])
+    @note = notes_for_user.find(params[:id])
   end
 
   def edit
-    @note = Note.find(params[:id])
+    @note = notes_for_user.find(params[:id])
   end
 
   #########
 
   def create
-    @note = Note.new(note_params)
+    @note = notes_for_user.new(note_params)
 
     if @note.save
       redirect_to @note
@@ -30,7 +30,7 @@ class NotesController < ApplicationController
   end
 
   def update
-    @note = Note.find(params[:id])
+    @note = notes_for_user.find(params[:id])
 
     if @note.update(note_params)
       redirect_to @note
@@ -40,10 +40,14 @@ class NotesController < ApplicationController
   end
 
   def destroy
-    @note = Note.find(params[:id])
+    @note = notes_for_user.find(params[:id])
     @note.destroy
 
     redirect_to notes_path
+  end
+
+  def notes_for_user
+    current_user.notes
   end
 
   private
