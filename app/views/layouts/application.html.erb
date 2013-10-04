@@ -8,13 +8,18 @@
 </head>
 <body>
 
-<%= render 'devise/menu/login_items' %>
-<%= render 'devise/menu/registration_items' %>
-
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 
-<%= yield %>
+<div class="pure-g-r">
+    <div class="pure-u">
+      <%= render 'devise/menu/login_items' %>
+      <%= render 'devise/menu/registration_items' %>
+    </div>
+    <div class="pure-u-1">
+    <%= yield %>
+    </div>
+</div>
 
 </body>
 </html>
