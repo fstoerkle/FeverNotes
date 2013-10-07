@@ -2,35 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 $color_text: #222;
 $color_bg: #EEE;
-
-@mixin borders {
-  border: 1px solid red;
-}
 
 body {
   background-color: $color_bg;
   color: $color_text;
 }
 
-.pure-u,
-.pure-u-1 {
-  @include borders;
+.pure-u-g {
+  
 }
 
-.notes {
-  list-style: none;
-
-  li {
-    height: 100%;
-  }
-
-  h3, p {
-    display: inline-block;
-  }
-
-  h3 {
-    margin: 0;
-  }
+.f-note-content {
+  
 }

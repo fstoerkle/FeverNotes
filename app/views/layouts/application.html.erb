@@ -8,19 +8,33 @@
 </head>
 <body>
 
-<div class="pure-menu pure-menu-open pure-menu-horizontal">
-  <a href="#" class="pure-menu-heading">FeverNotes</a>
+<nav class="pure-menu pure-menu-open pure-menu-horizontal">
+  <a href="/" class="pure-menu-heading">FeverNotes</a>
 
   <ul>
-  <%= render 'devise/menu/login_items' %>
-  <%= render 'devise/menu/registration_items' %>
+    <%= render 'devise/menu/login_items' %>
+    <%= render 'devise/menu/registration_items' %>
   </ul>
-</div>
+</nav>
+
+<%= render 'notes/new_note_button' %>
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 
-<%= yield %>
+
+<div class="pure-u-g">
+  <div class="pure-u-1-5 fever-note-list">
+    <nav class="pure-menu pure-menu-open">
+      <%= link_to 'Your notes', notes_path, class: "pure-menu-heading" %>
+      <%= render 'notes/note_list' %>
+    </nav>
+  </div><div class="pure-u-4-5">
+    <main>
+    <%= yield %>
+    </main>
+  </div>
+</div>
 
 </body>
 </html>

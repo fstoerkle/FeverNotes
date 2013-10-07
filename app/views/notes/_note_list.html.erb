@@ -1,0 +1,15 @@
+<ul>
+<% unless @notes.nil? %>
+<% @notes.each do |note| %>
+  <% if not @note.nil? and @note.id == note.id %>
+  <li class="pure-menu-selected"><a href="#"><%= note.title %></a></li>
+  <% else %>
+  <li><%= link_to note.title, note_path(note) %></li>
+  <% end %>
+<% end %>
+<% else %>
+  <li class="pure-menu-disabled">
+    <%= link_to "Create new note…", new_note_path %>
+  </li>
+<% end %>
+</ul>
