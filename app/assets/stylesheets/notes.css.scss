@@ -18,3 +18,19 @@ body {
 .pure-u-1 {
   @include borders;
 }
+
+.notes {
+  list-style: none;
+
+  li {
+    height: 100%;
+  }
+
+  h3, p {
+    display: inline-block;
+  }
+
+  h3 {
+    margin: 0;
+  }
+}

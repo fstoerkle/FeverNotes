@@ -4,14 +4,11 @@
 
 
 
-<ul>
+<ul class="notes">
   <% @notes.each do |note| %>
   <li>
-    <h2><%= note.title %></h2>
-    <p><%= note.content %></p>
-    <p>
-      <%= link_to 'Show Note', note_path(note) %> | 
-      <%= link_to 'Edit Note', edit_note_path(note) %>
+    <h3><%= note.title %></h3>
+    <p><%= link_to 'Show Note', note_path(note) %></p>
   </li>
   <% end %>
 </ul>
