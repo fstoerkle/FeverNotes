@@ -1,18 +1,14 @@
 
-<%= link_to 'All Notes', notes_path %>
+<h3 class="f-note-title"><%= @note.title %></h3>
 
-<p>
-  <strong>Title:</strong>
-  <%= @note.title %>
-</p>
+<nav class="pure-menu pure-menu-open pure-menu-horizontal">
+  <ul>
+    <li><%= link_to '✎', edit_note_path(@note), title: "Edit note" %></li>
+    <li><%= link_to '✗', note_path(@note), title: "Delete note",
+              method: :delete, data: { confirm: 'Do you really want to delete this note?' } %></li>
+  </ul>
+</nav>
 
-<p>
-  <strong>Content</strong>
-  <%= @note.content %>
-</p>
-
-<p>
-  <%= link_to 'Edit Note', edit_note_path(@note) %> |
-  <%= link_to 'Delete Note', note_path(@note),
-              method: :delete, data: { confirm: 'Do you really want to delete this note?' } %>
+<p class="f-note-content">
+  <%= markdown @note.content %>
 </p>
