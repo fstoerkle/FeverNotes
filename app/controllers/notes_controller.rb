@@ -1,8 +1,8 @@
 class NotesController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :set_notes
 
   def index
-    @notes = notes_for_user.all
   end
 
   def new
@@ -53,5 +53,9 @@ class NotesController < ApplicationController
   private
   def note_params
     params.require(:note).permit(:title, :content)
+  end
+
+  def set_notes
+    @notes = notes_for_user.all
   end
 end
