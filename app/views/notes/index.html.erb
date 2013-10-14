@@ -1,17 +1,1 @@
-<h1>Hello Notes!</h1>
-
-<%= link_to 'Create new note', new_note_path %>
-
-
-
-<ul>
-  <% @notes.each do |note| %>
-  <li>
-    <h2><%= note.title %></h2>
-    <p><%= note.content %></p>
-    <p>
-      <%= link_to 'Show Note', note_path(note) %> | 
-      <%= link_to 'Edit Note', edit_note_path(note) %>
-  </li>
-  <% end %>
-</ul>
+<h2>Welcome to FeverNotes!</h2>
