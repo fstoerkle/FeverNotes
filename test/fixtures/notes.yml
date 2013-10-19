@@ -1,9 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  title: MyString
-  content: MyText
+note_one:
+  title: Notiz 1
+  content: Bla bla
+  user: joe
 
-two:
-  title: MyString
-  content: MyText
+note_two:
+  title: Notiz No. 2
+  content: Lorem ipsum
+  user: jane
+
+note_three:
+  title: Das ist die dritte Notiz
+  content: And now for something completely different
+  user: jane
