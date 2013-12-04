@@ -57,3 +57,6 @@ gem 'unicorn'
 
 # Markdown parsing
 gem 'redcarpet'
+
+# pry
+gem 'pry'

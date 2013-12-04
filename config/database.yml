@@ -16,7 +16,7 @@ test:
   encoding: unicode
   host: localhost
   database: fevernotes_test
-  username: fevernotes
+  username: fevernotes_test
   pool: 5
   timeout: 5000
 

@@ -56,6 +56,6 @@ class NotesController < ApplicationController
   end
 
   def set_notes
-    @notes = notes_for_user.all
+    @notes = notes_for_user.to_a
   end
 end
